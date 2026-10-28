@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<html>
-    <head>
-        <title>Accessibility</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility · CoinBliss</title>
+  <meta name="description" content="How CoinBliss is built to be used with a keyboard, readable text, and labelled forms.">
+  <meta name="theme-color" content="#0C2340">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ConstantStyle.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo-mark.png" alt="CoinBliss">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="BudgetCalculator.html">Budget</a>
+        <a href="ExpenseTracker.html">Expenses</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="About us.html">About</a>
+        <a href="Profile.html">Profile</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link-quiet" href="Login.html">Log in</a>
+        <a class="btn btn-primary" href="SignUp.html">Open account</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="shell">
+        <p class="eyebrow">Accessibility</p>
+        <h1>Built to be read and operated clearly.</h1>
+        <p class="lede">CoinBliss is a static study aid. These are the measures in the interface, and the limits that still apply.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="shell stack">
+        <article class="panel">
+          <h2>How to use it</h2>
+          <dl class="glossary">
+            <dt>Keyboard</dt>
+            <dd>Every page starts with a skip link. Menus, forms, and buttons can be reached with Tab, and the focus ring stays visible.</dd>
+            <dt>Text</dt>
+            <dd>Copy uses a readable size and ordinary HTML headings, so browser zoom and text spacing still work.</dd>
+            <dt>Colour</dt>
+            <dd>Navy text on warm paper is the default. Figures that are over budget are also described in words, not by colour alone.</dd>
+            <dt>Forms</dt>
+            <dd>Each field has a visible label. Errors are written next to the form, not only in a pop-up.</dd>
+            <dt>Motion</dt>
+            <dd>The interface does not depend on animation. If your system asks for reduced motion, smooth scrolling is turned off.</dd>
+          </dl>
+        </article>
+        <article class="panel">
+          <h2>Known limits</h2>
+          <p>Some resource links leave CoinBliss for other sites, and those sites set their own accessibility. Budget and expense figures are saved only in this browser. There is no published support inbox for this prototype.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <p class="footer-brand">CoinBliss</p>
+        <p>Student budgeting, stated in plain figures.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="About us.html">About</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="Accessibility.html">Accessibility</a>
+        <a href="Login.html">Log in</a>
+      </nav>
+      <p class="legal">© 2026 CoinBliss. All rights reserved. Educational tool only. CoinBliss does not hold money or give regulated financial advice.</p>
+    </div>
+  </footer>
+</body>
 </html>

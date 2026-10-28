@@ -1,79 +1,98 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<html>
-    <head>
-    <link rel="stylesheet" href="ConstantStyle.css" type="text/css"/>
-
-        
-        <title>About us</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
-    <style>
-        /* Add your additional CSS styling here */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        p {
-            margin-bottom: 10px;
-        }
-
-        .feature {
-            display: inline-block;
-            margin: 20px;
-        }
-
-        .feature img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
-        }
-    </style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · CoinBliss</title>
+  <meta name="description" content="CoinBliss helps students learn budgeting, track expenses, and build a savings habit while they study.">
+  <meta name="theme-color" content="#0C2340">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ConstantStyle.css">
 </head>
 <body>
-    <div class="topnav">
-        <a href="index.html">Homepage</a>
-        <a href="Login.html">Login</a>
-        <a href="SignUp.html">Sign up</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo-mark.png" alt="CoinBliss">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="BudgetCalculator.html">Budget</a>
+        <a href="ExpenseTracker.html">Expenses</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="About us.html" aria-current="page">About</a>
+        <a href="Profile.html">Profile</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link-quiet" href="Login.html">Log in</a>
+        <a class="btn btn-primary" href="SignUp.html">Open account</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="shell">
+        <p class="eyebrow">About</p>
+        <h1>A calmer way through student money.</h1>
+        <p class="lede">CoinBliss exists so students can learn the language of money while they are still studying. The work is practical: a monthly budget, a record of expenses, and a short library of terms, reading, and South African student discounts.</p>
+      </div>
     </div>
 
-    <div class="container">
-        <h1>About Us</h1>
-        <p>The goal of CoinBliss is to equip students with the financial literacy, resources, and encouragement they require to proceed confidently through their academic careers and reach their long-term financial objectives. We are dedicated to improving students' lives and assisting them in laying the groundwork for future financial success.</p>
-        <h2>Here is what we offer</h2>
-        <div class="feature">
-            <img src="CoinBliss.jpg" alt="Budgeting Calculator">
-            <p>Budgeting Calculator</p>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <h2>What we offer</h2>
+          <p>Fewer late fees, a savings habit, and a clearer picture of what study actually costs.</p>
         </div>
-        <div class="feature">
-            <img src="financetracker.jpeg" alt="Finance Tracker">
-            <p>Finance Tracker</p>
+        <div class="offer-grid">
+          <article class="offer">
+            <p class="feature-index">01</p>
+            <h3>Budget calculator</h3>
+            <p>Income, expenses, and savings in one calculation, with the remainder labelled as money still to assign.</p>
+            <a href="BudgetCalculator.html">Use the calculator</a>
+          </article>
+          <article class="offer">
+            <p class="feature-index">02</p>
+            <h3>Expense ledger</h3>
+            <p>A running list of fixed monthly costs, grouped so rent, food, and transport are easy to tell apart.</p>
+            <a href="ExpenseTracker.html">Track expenses</a>
+          </article>
+          <article class="offer">
+            <p class="feature-index">03</p>
+            <h3>Resource library</h3>
+            <p>Discounts, a reading list, and a glossary written for the words that show up in the tools.</p>
+            <a href="FinancialResourse.html">Open the library</a>
+          </article>
+          <article class="offer">
+            <p class="feature-index">04</p>
+            <h3>Community profile</h3>
+            <p>A place to compare notes with other students who are building the same habit.</p>
+            <a href="Profile.html">View the profile</a>
+          </article>
         </div>
-        <div class="feature">
-            <img src="financialresources.png" alt="Financial Resources">
-            <p>Resources</p>
-        </div>
-        <div class="feature">
-            <img src="commuitysupport.jpeg" alt="Community Support">
-            <p>Community Support</p>
-        </div>
-    </div>
+      </div>
+    </section>
+  </main>
 
-    <div class="footer"></div>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <p class="footer-brand">CoinBliss</p>
+        <p>Student budgeting, stated in plain figures.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="About us.html">About</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="Accessibility.html">Accessibility</a>
+        <a href="Login.html">Log in</a>
+      </nav>
+      <p class="legal">© 2026 CoinBliss. All rights reserved. Educational tool only. CoinBliss does not hold money or give regulated financial advice.</p>
+    </div>
+  </footer>
 </body>
-  
 </html>

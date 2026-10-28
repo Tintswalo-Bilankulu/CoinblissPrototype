@@ -1,137 +1,211 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<html>
-    <head>
-        <link rel="stylesheet" href="ConstantStyle.css" type="text/css"/>
-
-        <style>
-    
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: buttonhighlight;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      margin-bottom: 10px;
-      color: #555;
-    }
-
-    input[type="text"],
-    input[type="number"] {
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      padding: 10px;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-    }
-
-    li:last-child {
-      border-bottom: none;
-    }
-  </style>
-        <title>Expense tracker</title>
-        
-        <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
-    </head>
-    <body>
-       <div class="dropdown">
-  <button class="dropbtn">Menu</button>
-  <div class="dropdown-content">
-        <a href="BudgetCalculator.html">Calculator</a>
-        <a href="ExpenseTracker.html">Expense Tracker</a>
-        <a href="Profile.html">My Profile</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense ledger · CoinBliss</title>
+  <meta name="description" content="Record monthly student expenses and see a running total by category.">
+  <meta name="theme-color" content="#0C2340">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ConstantStyle.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo-mark.png" alt="CoinBliss">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="BudgetCalculator.html">Budget</a>
+        <a href="ExpenseTracker.html" aria-current="page">Expenses</a>
         <a href="FinancialResourse.html">Resources</a>
-        <a href="index.html">Homepage</a>
-       
+        <a href="About us.html">About</a>
+        <a href="Profile.html">Profile</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link-quiet" href="Login.html">Log in</a>
+        <a class="btn btn-primary" href="SignUp.html">Open account</a>
+      </div>
     </div>
-   </div>     
-        
-    <h1>Expense Tracker</h1>
-    <div class="typewriter">
-        <h1>Now list all of your fixed monthly expenses and it's cost,tap "add expense" after each expenses.</h1>
-   
-    <div class="container">
-        <form id="expenseForm">
-          <label for="expenseName">Expense Name:</label>
-          <input type="text" id="expenseName" name="expenseName" required>
+  </header>
 
-          <label for="expenseAmount">Expense Amount:</label>
-          <input type="number" id="expenseAmount" name="expenseAmount" required>
-
-          <button type="submit">Add Expense</button>
+  <main id="main">
+    <div class="page-head">
+      <div class="shell">
+        <p class="eyebrow">Ledger</p>
+        <h1>Expense ledger</h1>
+        <p class="lede">Add each monthly cost and its category. CoinBliss keeps a running total on this device only.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="shell workbench">
+        <form id="expenseForm" class="panel" method="post" action="ExpenseTracker.html">
+          <h2>Add an expense</h2>
+          <div class="field">
+            <label for="expenseName">Name</label>
+            <input type="text" id="expenseName" name="expenseName" autocomplete="off" required>
+          </div>
+          <div class="field">
+            <label for="expenseCategory">Category</label>
+            <select id="expenseCategory" name="expenseCategory">
+              <option>Housing</option>
+              <option>Food</option>
+              <option>Transport</option>
+              <option>Study</option>
+              <option>Personal</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="expenseAmount">Amount</label>
+            <input type="number" id="expenseAmount" name="expenseAmount" min="0" step="0.01" inputmode="decimal" autocomplete="off" required>
+          </div>
+          <p id="form-error" class="form-error" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Add expense</button>
         </form>
+        <section class="panel" aria-labelledby="ledger-title">
+          <h2 id="ledger-title">This month</h2>
+          <p id="emptyState" class="hint">No expenses yet. Add rent, transport, and groceries to see the month clearly.</p>
+          <ul id="expenseList" class="ledger"></ul>
+          <p class="total-line" aria-live="polite">
+            <span>Total</span>
+            <strong id="expenseTotal">R0.00</strong>
+          </p>
+          <div id="categorySummary" class="category-summary"></div>
+        </section>
+      </div>
+    </section>
+  </main>
 
-    <ul id="expenseList">
-      <!-- Expenses will be displayed here -->
-    </ul>
-  </div>
-
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <p class="footer-brand">CoinBliss</p>
+        <p>Student budgeting, stated in plain figures.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="About us.html">About</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="Accessibility.html">Accessibility</a>
+        <a href="Login.html">Log in</a>
+      </nav>
+      <p class="legal">© 2026 CoinBliss. All rights reserved. Educational tool only. CoinBliss does not hold money or give regulated financial advice.</p>
+    </div>
+  </footer>
   <script>
-    document.getElementById('expenseForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting
+    var STORAGE_KEY = "coinbliss-expenses";
+    var CATEGORIES = ["Housing", "Food", "Transport", "Study", "Personal", "Other"];
+    var expenses = [];
 
-      // Get values from form inputs
-      var expenseName = document.getElementById('expenseName').value;
-      var expenseAmount = parseFloat(document.getElementById('expenseAmount').value);
+    function formatRand(value) {
+      var parts = Math.abs(value).toFixed(2).split(".");
+      var grouped = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return "R" + grouped + "." + parts[1];
+    }
 
-      // Create a new list item to display the expense
-      var li = document.createElement('li');
-      li.textContent = expenseName + ': R' + expenseAmount.toFixed(2);
+    function normalise(item) {
+      if (!item) return null;
+      var name = String(item.name || "").trim();
+      var amount = Number(item.amount);
+      var category = CATEGORIES.indexOf(item.category) >= 0 ? item.category : "Other";
+      if (!name || !Number.isFinite(amount) || amount < 0) return null;
+      return { name: name, amount: amount, category: category };
+    }
 
-      // Append the new list item to the expense list
-      document.getElementById('expenseList').appendChild(li);
+    function load() {
+      try {
+        var parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        if (!Array.isArray(parsed)) return [];
+        return parsed.map(normalise).filter(Boolean);
+      } catch (error) {
+        return [];
+      }
+    }
 
-      // Clear the form inputs
-      document.getElementById('expenseName').value = '';
-      document.getElementById('expenseAmount').value = '';
+    function save() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(expenses));
+      } catch (error) {
+        return;
+      }
+    }
+
+    function render() {
+      var list = document.getElementById("expenseList");
+      var empty = document.getElementById("emptyState");
+      var summary = document.getElementById("categorySummary");
+      var total = expenses.reduce(function (sum, item) { return sum + item.amount; }, 0);
+      list.replaceChildren();
+      summary.replaceChildren();
+      empty.hidden = expenses.length > 0;
+
+      expenses.forEach(function (item, index) {
+        var li = document.createElement("li");
+        var name = document.createElement("span");
+        name.className = "expense-name";
+        var title = document.createElement("span");
+        title.className = "expense-title";
+        title.textContent = item.name;
+        var category = document.createElement("span");
+        category.className = "expense-cat";
+        category.textContent = item.category;
+        name.append(title, category);
+        var amount = document.createElement("span");
+        amount.className = "amount";
+        amount.textContent = formatRand(item.amount);
+        var remove = document.createElement("button");
+        remove.type = "button";
+        remove.className = "btn-text";
+        remove.textContent = "Remove";
+        remove.setAttribute("aria-label", "Remove " + item.name);
+        remove.addEventListener("click", function () {
+          expenses.splice(index, 1);
+          save();
+          render();
+        });
+        li.append(name, amount, remove);
+        list.append(li);
+      });
+
+      document.getElementById("expenseTotal").textContent = formatRand(total);
+
+      CATEGORIES.forEach(function (category) {
+        var subtotal = expenses.reduce(function (sum, item) {
+          return item.category === category ? sum + item.amount : sum;
+        }, 0);
+        if (subtotal <= 0) return;
+        var chip = document.createElement("span");
+        chip.textContent = category + " " + formatRand(subtotal);
+        summary.append(chip);
+      });
+    }
+
+    document.getElementById("expenseForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var name = document.getElementById("expenseName").value;
+      var category = document.getElementById("expenseCategory").value;
+      var amount = Number(document.getElementById("expenseAmount").value);
+      var error = document.getElementById("form-error");
+      var item = normalise({ name: name, category: category, amount: amount });
+      if (!item) {
+        error.textContent = "Enter a name and an amount of zero or more.";
+        return;
+      }
+      error.textContent = "";
+      expenses.push(item);
+      save();
+      event.currentTarget.reset();
+      render();
+      document.getElementById("expenseName").focus();
     });
+
+    expenses = load();
+    render();
   </script>
-  <div class="footer">
-         © 2024 CoinBliss. All rights reserved.
-                    </div>
-    </body>
-     
+</body>
 </html>

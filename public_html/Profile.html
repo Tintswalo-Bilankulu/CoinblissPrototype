@@ -1,249 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tintswalo123 - Profile</title>
-     <link rel="stylesheet" href="ConstantStyle.css" type="text/css"/>
-    <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
-    <style>
-      
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #007bff;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .profile-info {
-            text-align: center;
-        }
-
-        .profile-info img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 5px solid #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-info h2 {
-            margin-bottom: 10px;
-            color: #0056b3;
-        }
-
-        .profile-info p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .post {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .post p {
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .social-media a {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-left: 5px;
-        }
-
-        .social-media a:hover {
-            background-color: #0056b3;
-        }
-
-        .comments {
-            margin-top: 20px;
-        }
-
-        .comment {
-            background-color: #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .comment p {
-            color: #333;
-            line-height: 1.4;
-        }
-
-        .like-btn,
-        .useful-btn {
-            margin-right: 10px;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .like-btn:hover,
-        .useful-btn:hover {
-            background-color: #0056b3;
-            color: #fff;
-        }
-
-        .join-community {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .join-community button {
-            padding: 12px 24px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .join-community button:hover {
-            background-color: #555;
-        }
-
-    </style>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile · CoinBliss</title>
+  <meta name="description" content="Tintswalo123’s CoinBliss community profile.">
+  <meta name="theme-color" content="#0C2340">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ConstantStyle.css">
 </head>
-  <div class="dropdown">
-  <button class="dropbtn">Menu</button>
-  <div class="dropdown-content">
-        <a href="BudgetCalculator.html">Calculator</a>
-        <a href="ExpenseTracker.html">Expense Tracker</a>
-        <a href="Profile.html">My Profile</a>
-        <a href="FinancialResourse.html">Resources</a>
-        <a href="index.html">Homepage</a>
-       
-    </div>
-   </div>
 <body>
-<div class="container">
-    <h1>My Profile</h1>
-
-    <div class="profile-info">
-        <img src="profile.jpeg" alt="Profile Picture">
-        <h2>Tintswalo123</h2>
-        <p class="followers">Followers: 100</p>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo-mark.png" alt="CoinBliss">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="BudgetCalculator.html">Budget</a>
+        <a href="ExpenseTracker.html">Expenses</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="About us.html">About</a>
+        <a href="Profile.html" aria-current="page">Profile</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link-quiet" href="Login.html">Log in</a>
+        <a class="btn btn-primary" href="SignUp.html">Open account</a>
+      </div>
     </div>
+  </header>
 
-    <div class="posts">
-        <div class="post">
-            <p>I just wanted to say hello and let the CoinBliss community know who I am. Making connections with other students who share my enthusiasm for financial empowerment and education excites me. Let's help one another out as we travel through our finances!</p>
-            <div class="social-media">
-                <button class="like-btn">Like</button>
-                
-                <a href="https://www.facebook.com/">Share on Facebook</a>
-                <a href="https://twitter.com/?lang=en-za">Share on Twitter</a>
-                <a href="https://www.instagram.com/?hl=en">Share on Instagram</a>
-            </div>
-            <div class="comments">
-                <div class="comment">
-                    <p>Jess123: Welcome to CoinBliss! Excited to connect with you.</p>
-                     <button class="useful-btn">Useful?</button>
-                </div>
-                <div class="comment">
-                    <p>FinanceGeek45: Greetings Tintswalo, looking forward to learning from your posts.</p>
-                     <button class="useful-btn">Useful?</button>
-                </div>
-                <!-- Add more comments dynamically -->
-            </div>
-        </div>
-        <div class="post">
-            <p>I recently started using the expense tracking feature on CoinBliss, and I'm really enjoying it! I'd like to know how to maximize this feature and see my spending patterns more clearly. Does anyone have any tips?</p>
-            <div class="social-media">
-                <button class="like-btn">Like</button>
-               
-                <a href="https://www.facebook.com/">Share on Facebook</a>
-                <a href="https://twitter.com/?lang=en-za">Share on Twitter</a>
-                <a href="https://www.instagram.com/?hl=en">Share on Instagram</a>
-            </div>
-            <div class="comments">
-                <div class="comment">
-                    <p>Frank32:! I suggest categorizing your expenses for better insights.</p>
-                     <button class="useful-btn">Useful?</button>
-                </div>
-                <!-- Add more comments dynamically -->
-            </div>
-        </div>
-         <div class="post">
-            <p>I'm so exited to announce that I found CoinBliss very helpful, i reached a milestone by being able to pay for rent, avoid late fees and have money left to spend on!</p>
-            <div class="social-media">
-                <button class="like-btn">Like</button>
-               
-                <a href="https://www.facebook.com/">Share on Facebook</a>
-                <a href="https://twitter.com/?lang=en-za">Share on Twitter</a>
-                <a href="https://www.instagram.com/?hl=en">Share on Instagram</a>
-            </div>
-            <div class="comments">
-                <div class="comment">
-                    <p>Ammie56: Congratulations Tintswalo!  .</p>
-                     <button class="useful-btn">Useful?</button>
-                </div>
-                <!-- Add more comments dynamically -->
-            </div>
-        </div>
+  <main id="main">
+    <div class="page-head">
+      <div class="shell">
+        <p class="eyebrow">Community</p>
+        <h1>Your profile</h1>
+      </div>
     </div>
+    <section class="section">
+      <div class="shell">
+        <article class="panel">
+          <div class="who">
+            <div class="monogram" aria-hidden="true">T</div>
+            <div>
+              <h2>Tintswalo123</h2>
+              <p>Student member · 100 followers</p>
+            </div>
+          </div>
 
-    <div class="join-community">
-        <button>Join Financial Empowerment Community</button>
+          <div class="post">
+            <p>I wanted to introduce myself to the CoinBliss community. I am here to learn with other students who take their money seriously. We can compare notes as we go.</p>
+            <div class="actions">
+              <button class="btn btn-secondary btn-small like-btn" type="button" aria-pressed="false">Like</button>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook <span class="visually-hidden">(opens in a new tab)</span></a>
+              <a href="https://twitter.com/?lang=en-za" target="_blank" rel="noopener noreferrer">X <span class="visually-hidden">(opens in a new tab)</span></a>
+              <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer">Instagram <span class="visually-hidden">(opens in a new tab)</span></a>
+            </div>
+            <div class="comment">
+              <p><strong>Jess123:</strong> Welcome to CoinBliss. Glad you are here.</p>
+              <button class="btn btn-secondary btn-small useful-btn" type="button" aria-pressed="false">Mark useful</button>
+            </div>
+            <div class="comment">
+              <p><strong>FinanceGeek45:</strong> Hello Tintswalo. I am looking forward to reading what you try.</p>
+              <button class="btn btn-secondary btn-small useful-btn" type="button" aria-pressed="false">Mark useful</button>
+            </div>
+          </div>
+
+          <div class="post">
+            <p>I started using the expense ledger and I can already see the month more clearly. How do you group spending so the pattern is obvious?</p>
+            <div class="actions">
+              <button class="btn btn-secondary btn-small like-btn" type="button" aria-pressed="false">Like</button>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook <span class="visually-hidden">(opens in a new tab)</span></a>
+              <a href="https://twitter.com/?lang=en-za" target="_blank" rel="noopener noreferrer">X <span class="visually-hidden">(opens in a new tab)</span></a>
+              <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer">Instagram <span class="visually-hidden">(opens in a new tab)</span></a>
+            </div>
+            <div class="comment">
+              <p><strong>Frank32:</strong> Categorise them. Housing, food, and transport are enough to start.</p>
+              <button class="btn btn-secondary btn-small useful-btn" type="button" aria-pressed="false">Mark useful</button>
+            </div>
+          </div>
+
+          <div class="post">
+            <p>A small milestone: rent is paid, there are no late fees, and there is still money left for the rest of the month.</p>
+            <div class="actions">
+              <button class="btn btn-secondary btn-small like-btn" type="button" aria-pressed="false">Like</button>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook <span class="visually-hidden">(opens in a new tab)</span></a>
+              <a href="https://twitter.com/?lang=en-za" target="_blank" rel="noopener noreferrer">X <span class="visually-hidden">(opens in a new tab)</span></a>
+              <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer">Instagram <span class="visually-hidden">(opens in a new tab)</span></a>
+            </div>
+            <div class="comment">
+              <p><strong>Ammie56:</strong> Congratulations, Tintswalo.</p>
+              <button class="btn btn-secondary btn-small useful-btn" type="button" aria-pressed="false">Mark useful</button>
+            </div>
+          </div>
+
+          <div class="join">
+            <button id="joinCommunity" class="btn btn-primary" type="button" aria-pressed="false">Join the community</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <p class="footer-brand">CoinBliss</p>
+        <p>Student budgeting, stated in plain figures.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="About us.html">About</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="Accessibility.html">Accessibility</a>
+        <a href="Login.html">Log in</a>
+      </nav>
+      <p class="legal">© 2026 CoinBliss. All rights reserved. Educational tool only. CoinBliss does not hold money or give regulated financial advice.</p>
     </div>
-</div>
-<div class="footer">
-    © 2024 CoinBliss. All rights reserved.
-</div>
-
-<script>
-    // Script for handling like button click
-    const likeButtons = document.querySelectorAll('.like-btn');
-    likeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert('You liked this post!');
-        });
+  </footer>
+  <script>
+    document.querySelectorAll(".like-btn").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var pressed = button.getAttribute("aria-pressed") === "true";
+        button.setAttribute("aria-pressed", pressed ? "false" : "true");
+        button.textContent = pressed ? "Like" : "Liked";
+      });
     });
 
-    // Script for handling useful button click
-    const usefulButtons = document.querySelectorAll('.useful-btn');
-    usefulButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const response = confirm('Was this comment useful?');
-            if (response) {
-                alert('Thank you for your feedback!');
-            } else {
-                alert('We\'ll try to improve!');
-            }
-        });
+    document.querySelectorAll(".useful-btn").forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (button.getAttribute("aria-pressed") === "true") return;
+        button.setAttribute("aria-pressed", "true");
+        button.textContent = "Marked useful";
+      });
     });
-</script>
 
+    var join = document.getElementById("joinCommunity");
+    join.addEventListener("click", function () {
+      var pressed = join.getAttribute("aria-pressed") === "true";
+      join.setAttribute("aria-pressed", pressed ? "false" : "true");
+      join.textContent = pressed ? "Join the community" : "Joined";
+    });
+  </script>
 </body>
 </html>

@@ -1,82 +1,151 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-        <head>
-             <style>
-                body {
-                    margin: 0;
-                    font-family: Arial, sans-serif;
-                }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoinBliss · Student finances</title>
+  <meta name="description" content="CoinBliss helps students budget income, record expenses, and learn personal finance in rand.">
+  <meta name="theme-color" content="#0C2340">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ConstantStyle.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="logo-mark.png" alt="CoinBliss">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="BudgetCalculator.html">Budget</a>
+        <a href="ExpenseTracker.html">Expenses</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="About us.html">About</a>
+        <a href="Profile.html">Profile</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link-quiet" href="Login.html">Log in</a>
+        <a class="btn btn-primary" href="SignUp.html">Open account</a>
+      </div>
+    </div>
+  </header>
 
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <img class="hero-logo" src="logo.png" alt="CoinBliss. Empowering student finances, one coin at a time.">
+          <h1>Know what this month’s money is for.</h1>
+          <p class="lede">CoinBliss is a budgeting desk for students. Record income, set savings aside, and keep a ledger of spending in rand, before the month gets away from you.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="SignUp.html">Open an account</a>
+            <a class="btn btn-secondary" href="BudgetCalculator.html">Try the calculator</a>
+          </div>
+        </div>
+        <aside class="snapshot" aria-label="Illustrative October snapshot">
+          <p class="snapshot-kicker">Example · October</p>
+          <h2>Monthly position</h2>
+          <dl>
+            <div><dt>Income</dt><dd>R12,400.00</dd></div>
+            <div><dt>Expenses</dt><dd>R7,850.00</dd></div>
+            <div><dt>Savings</dt><dd>R1,500.00</dd></div>
+            <div><dt>Left to assign</dt><dd>R3,050.00</dd></div>
+          </dl>
+          <div class="meter" role="img" aria-label="Example split: 63 percent expenses, 12 percent savings, the rest unassigned.">
+            <span class="meter-expenses"></span>
+            <span class="meter-savings"></span>
+          </div>
+          <p class="meter-key">
+            <span><span class="swatch" aria-hidden="true"></span>Expenses</span>
+            <span><span class="swatch swatch-savings" aria-hidden="true"></span>Savings</span>
+            <span><span class="swatch swatch-open" aria-hidden="true"></span>Unassigned</span>
+          </p>
+          <p class="snapshot-note">Illustrative figures only. Your own numbers stay in this browser.</p>
+        </aside>
+      </div>
+    </section>
 
-                .parallax {
-                    background-image: url("Screenshot 2024-04-15 192607.png");
-                    min-height: 500px;
-                    background-attachment: fixed;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                    padding-top: 200px; 
-                }
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <h2>What you can do here</h2>
+          <p>Three tools, each with one job. None of them replaces a bank account.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <p class="feature-index">01</p>
+            <h3>Budget calculator</h3>
+            <p>Put monthly income, committed spending, and savings on one page, then see what is still unassigned.</p>
+            <a href="BudgetCalculator.html">Open the calculator</a>
+          </article>
+          <article class="feature">
+            <p class="feature-index">02</p>
+            <h3>Expense ledger</h3>
+            <p>List rent, transport, food, and study costs. CoinBliss totals them and groups them by category.</p>
+            <a href="ExpenseTracker.html">Open the ledger</a>
+          </article>
+          <article class="feature">
+            <p class="feature-index">03</p>
+            <h3>Resource library</h3>
+            <p>Student discounts, a short reading list, and a glossary for the terms used in the calculator.</p>
+            <a href="FinancialResourse.html">Browse resources</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section section-follow">
+      <div class="shell">
+        <div class="section-head">
+          <h2>How a month is put together</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>State your income</h3>
+            <p>Include bursaries, wages, and family support. Use the amount you can actually spend this month.</p>
+          </li>
+          <li>
+            <h3>List committed costs</h3>
+            <p>Rent, transport, data, and groceries belong on the ledger before anything optional does.</p>
+          </li>
+          <li>
+            <h3>Assign what remains</h3>
+            <p>Savings first. What is left is spending you can still choose, or a gap you need to close.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-                .parallax-content {
-                    background-color: rgba(0, 0, 0, 0.5); 
-                    color: white;
-                    padding: 20px;
-                    border-radius: 10px;
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
+    <section class="band">
+      <div class="shell">
+        <h2>Start with this month’s numbers.</h2>
+        <p class="lede">You can try the calculator immediately, or open an account and keep a profile with the community.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="BudgetCalculator.html">Calculate a budget</a>
+          <a class="btn btn-secondary" href="About us.html">Read about CoinBliss</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                /* Main content section */
-                .main-content {
-                    padding: 50px;
-                    text-align: center;
-                }
-
-
-
-            </style>
-            <title>Homepage</title>
-            <link rel="stylesheet" href="ConstantStyle.css" type="text/css"/>
-             <link rel="icon" href="Screenshot 2024-04-15 192607.png" type="image/x-icon">
-              
-        </head>
-           
-
-        <body>
-            <div class="topnav">
-                           <a href="Login.html">Login</a>
-                           <a href="About us.html">About Us</a>
-                           <a href="SignUp.html">Sign up</a>
-                       </div> 
-
-              <h1 class="smoke-text">Welcome to CoinBliss</h1>
-
-            <div class="parallax">
-                <div class="parallax-content">
-                <h2>Take Control of Your Finances with CoinBliss</h2>
-                <p>Greetings from CoinBliss, the best financial partner for students! At CoinBliss, we think that handling your money should be empowering, illuminating, and even fun rather than a hassle. For this reason, we have developed an extensive platform that is intended to assist students such as yourself in taking charge of your finances and confidently achieving your financial objectives.</p>
-
-                </div>
-            </div>   
-
-
-            <div class="parallax">
-                <div class="parallax-content">
-
-                    <p>CoinBliss is a comprehensive online platform designed to empower students with effective budget management tools and resources. With a user-friendly interface and robust features, CoinBliss offers students the ability to take control of their finances, make informed decisions, and achieve their financial goals.</p>
-
-                 </div>
-
-            <div class="footer">
-                © 2024 CoinBliss. All rights reserved.
-            </div>
-
-        </body>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <p class="footer-brand">CoinBliss</p>
+        <p>Student budgeting, stated in plain figures.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="About us.html">About</a>
+        <a href="FinancialResourse.html">Resources</a>
+        <a href="Accessibility.html">Accessibility</a>
+        <a href="Login.html">Log in</a>
+      </nav>
+      <p class="legal">© 2026 CoinBliss. All rights reserved. Educational tool only. CoinBliss does not hold money or give regulated financial advice.</p>
+    </div>
+  </footer>
+</body>
 </html>
